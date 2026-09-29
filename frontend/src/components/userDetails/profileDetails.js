@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 const ProfileDetails = ({ user }) => {
     //console.log(user)
     const profileBannerUrl = user.profileBanner
-        ? `http://localhost:4000${user.profileBanner}` 
+        ? `https://skillxchange-backend-ih1t.onrender.com${user.profileBanner}` 
         : '/images/defaultBanner.svg'
     const profilePictureUrl = user.profilePicture   
-        ? `http://localhost:4000${user.profilePicture}` 
+        ? `https://skillxchange-backend-ih1t.onrender.com${user.profilePicture}` 
         : '/images/user.svg'
     console.log(user.profileBanner)
     return (

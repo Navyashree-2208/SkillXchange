@@ -16,7 +16,7 @@ const MeetingDropdown = ({ onClose, onCreateMeeting, chatID }) => {
     useEffect(() => {
         const fetchMeetings = async () => {
             try {
-                const response = await fetch(`http://localhost:4000/api/users/get/meetings/${chatID}`,{
+                const response = await fetch(`https://skillxchange-backend-ih1t.onrender.com/api/users/get/meetings/${chatID}`,{
                     method:'GET',
                 });
                 if (!response.ok) {

@@ -28,7 +28,7 @@ const handleSubmit = async (e) => {
     console.log(meetingDetails.title, meetingDetails.startTime, meetingDetails.endTime);
     
     try {
-        const response = await fetch('http://localhost:4000/api/users/createMeeting', {
+        const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/createMeeting', {
             method: 'POST',
             body: JSON.stringify({
                 chatID: chatID.toString(),  //i need chatID from thr specific chat

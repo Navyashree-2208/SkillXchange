@@ -11,7 +11,7 @@ const LearningCard = ({ learning_skill, userID, self}) => {
             "skillType": "learning", 
         }
         console.log(skill)
-        const response = await fetch(`http://localhost:4000/api/users/${userID}`, {
+        const response = await fetch(`https://skillxchange-backend-ih1t.onrender.com/api/users/${userID}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

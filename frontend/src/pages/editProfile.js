@@ -31,7 +31,7 @@ const EditProfile = () => {
             const fetchUser = async () => {
                 try {
                     console.log('/api/users/' + email)
-                    const response = await fetch('http://localhost:4000/api/users/' + encodeURIComponent(email));
+                    const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/' + encodeURIComponent(email));
 
                     console.log('Response status:', response.status);
                     console.log('Response content-type:', response.headers.get('content-type'));

@@ -47,7 +47,7 @@ function SignupForm() {
                     }
                 };
 
-                fetch('http://localhost:4000/api/users', {
+                fetch('https://skillxchange-backend-ih1t.onrender.com/api/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

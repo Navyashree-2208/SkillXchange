@@ -38,7 +38,7 @@ const EditTeachingSkills = ({skills : initialSkills, email}) => {
             }
         }
         console.log(User)
-        const response = await fetch('http://localhost:4000/api/users/' + email, {
+        const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/' + email, {
             method: 'PATCH',
             body: JSON.stringify(User),
             headers: {

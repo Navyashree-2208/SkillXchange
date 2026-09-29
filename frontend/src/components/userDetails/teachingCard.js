@@ -12,7 +12,7 @@ const TeachingCard = ({ teaching_skill, userID, self }) => {
             "skillId": teaching_skill._id,
             "skillType": "teaching", 
         }
-        const response = await fetch(`http://localhost:4000/api/users/${userID}`, {
+        const response = await fetch(`https://skillxchange-backend-ih1t.onrender.com/api/users/${userID}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

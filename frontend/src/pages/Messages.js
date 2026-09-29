@@ -10,7 +10,7 @@ import { ChatState } from "../context/ChatProvider";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:4000";
+const ENDPOINT = "https://skillxchange-backend-ih1t.onrender.com";
 const TYPING_TIMEOUT = 2000;
 
 const Messages = () => {
@@ -50,7 +50,7 @@ const Messages = () => {
 
     const makeAuthenticatedRequest = useCallback(async (endpoint, options = {}) => {
         const token = await auth.currentUser.getIdToken(true);
-        const response = await fetch(`http://localhost:4000/api/${endpoint}`, {
+        const response = await fetch(`https://skillxchange-backend-ih1t.onrender.com/api/${endpoint}`, {
             ...options,
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -282,7 +282,7 @@ const Messages = () => {
             const fetchUser = async () => {
                 try {
                     console.log('/api/users/' + email)
-                    const response = await fetch('http://localhost:4000/api/users/' + encodeURIComponent(email));
+                    const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/' + encodeURIComponent(email));
 
                     console.log('Response status:', response.status);
                     console.log('Response content-type:', response.headers.get('content-type'));
@@ -293,7 +293,7 @@ const Messages = () => {
                         setProfile(json);
                         console.log(profile)
                         setProfilePicture(json.User.Personal_info.profilePicture  
-                                 ? `http://localhost:4000${json.User.Personal_info.profilePicture  }` 
+                                 ? `https://skillxchange-backend-ih1t.onrender.com${json.User.Personal_info.profilePicture  }` 
                                  : '/images/user.svg')
                     } else {
                         console.error("Failed to fetch user data");
@@ -308,7 +308,7 @@ const Messages = () => {
     //console.log(profile)
 
     // setProfilePicture(profile.User.Personal_info.profilePicture  
-    //     ? `http://localhost:4000${profile.User.Personal_info.profilePicture  }` 
+    //     ? `https://skillxchange-backend-ih1t.onrender.com${profile.User.Personal_info.profilePicture  }` 
     //     : '/images/user.svg')
 
     //sdfkjsdkhf

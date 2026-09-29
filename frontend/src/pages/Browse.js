@@ -32,7 +32,7 @@ const Browse = () => {
     useEffect( () => {
         const fetchUsers = async () => {
             console.log(JSON.stringify(userEmail))
-            const response = await fetch('http://localhost:4000/api/users/recommendations', {
+            const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/recommendations', {
                 method: 'POST',
                 body: JSON.stringify(userEmail),
                 headers: {
@@ -58,7 +58,7 @@ setUsers(json);
     // useEffect( () => {
     //     const fetchUsers = async () => {
     //         try {
-    //             const response = await fetch('http://localhost:4000/api/users'); 
+    //             const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users'); 
     //             const data = await response.json();
         
     //             setUsers(data);

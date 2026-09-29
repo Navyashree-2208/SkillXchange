@@ -44,7 +44,7 @@ function Chat({ socket, socketConnected, otherUser }) {
                 const token = await auth.currentUser.getIdToken(true);
 
                 setNewMessage('');
-                const response = await fetch('http://localhost:4000/api/messages', {
+                const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/messages', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ function Chat({ socket, socketConnected, otherUser }) {
             const auth = getAuth();
             const token = await auth.currentUser.getIdToken(true);
 
-            const response = await fetch(`http://localhost:4000/api/messages/${selectedChat._id}`, {
+            const response = await fetch(`https://skillxchange-backend-ih1t.onrender.com/api/messages/${selectedChat._id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ function Chat({ socket, socketConnected, otherUser }) {
             const auth = getAuth();
             const token = await auth.currentUser.getIdToken(true);
 
-            const response = await fetch('http://localhost:4000/api/users/current', {
+            const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/current', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -202,7 +202,7 @@ function Chat({ socket, socketConnected, otherUser }) {
     const [profilePictureUrl, setProfilePictureUrl] = useState(null)
     useEffect(() => {
         if (chatPartner && chatPartner.User?.Personal_info?.profilePicture) {
-            setProfilePictureUrl(`http://localhost:4000${chatPartner.User.Personal_info.profilePicture}`);
+            setProfilePictureUrl(`https://skillxchange-backend-ih1t.onrender.com${chatPartner.User.Personal_info.profilePicture}`);
         } else {
             setProfilePictureUrl('/images/user.svg'); 
         }

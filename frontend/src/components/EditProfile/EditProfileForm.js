@@ -17,8 +17,8 @@ const EditProfileForm = ( {user} ) => {
     //profile pictures
     const [profilePictureFile, setProfilePictureFile] = useState(null);
     const [profileBannerFile, setProfileBannerFile] = useState(null);
-    const [profilePictureUrl, setProfilePictureUrl] = useState(user.profilePicture ? `http://localhost:4000${user.profilePicture}` : '/images/user.svg');
-    const [profileBannerUrl, setProfileBannerUrl] = useState(user.profileBanner ? `http://localhost:4000${user.profileBanner}` : '/images/defaultBanner.svg');
+    const [profilePictureUrl, setProfilePictureUrl] = useState(user.profilePicture ? `https://skillxchange-backend-ih1t.onrender.com${user.profilePicture}` : '/images/user.svg');
+    const [profileBannerUrl, setProfileBannerUrl] = useState(user.profileBanner ? `https://skillxchange-backend-ih1t.onrender.com${user.profileBanner}` : '/images/defaultBanner.svg');
 
   
     const [formSubmitted, setFormSubmitted] = useState(false)
@@ -48,7 +48,7 @@ const EditProfileForm = ( {user} ) => {
         if (profilePictureFile) {
             const pictureFormData = new FormData();
             pictureFormData.append("file", profilePictureFile);
-            await fetch(`http://localhost:4000/api/users/uploadProfilePicture/${user.Email}`, {
+            await fetch(`https://skillxchange-backend-ih1t.onrender.com/api/users/uploadProfilePicture/${user.Email}`, {
                 method: 'PATCH',
                 body: pictureFormData,
             });
@@ -58,7 +58,7 @@ const EditProfileForm = ( {user} ) => {
             const bannerFormData = new FormData();
             bannerFormData.append("file", profileBannerFile);
 
-            await fetch(`http://localhost:4000/api/users/uploadProfileBanner/${user.Email}`, {
+            await fetch(`https://skillxchange-backend-ih1t.onrender.com/api/users/uploadProfileBanner/${user.Email}`, {
                 method: 'PATCH',
                 body: bannerFormData,
             });
@@ -72,7 +72,7 @@ const EditProfileForm = ( {user} ) => {
         
         console.log(User)
 
-        const response = await fetch('http://localhost:4000/api/users/' + user.Email, {
+        const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/' + user.Email, {
             method: 'PATCH',
             body: JSON.stringify(User),
             headers: {

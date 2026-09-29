@@ -17,7 +17,7 @@ const OtherUser = () => {
             const fetchUser = async () => {
                 try {
                     console.log('/api/users/other/' + username)
-                    const response = await fetch('http://localhost:4000/api/users/other/' + username);
+                    const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/other/' + username);
 
                     //console.log('Response status:', response.status);
                     //console.log('Response content-type:', response.headers.get('content-type'));
@@ -43,10 +43,10 @@ const OtherUser = () => {
     const user = profile.User.Personal_info
 
     const profileBannerUrl = user.profileBanner
-        ? `http://localhost:4000${user.profileBanner}` 
+        ? `https://skillxchange-backend-ih1t.onrender.com${user.profileBanner}` 
         : '/images/defaultBanner.svg'
     const profilePictureUrl = user.profilePicture   
-        ? `http://localhost:4000${user.profilePicture}` 
+        ? `https://skillxchange-backend-ih1t.onrender.com${user.profilePicture}` 
         : '/images/user.svg'
 
     return (

@@ -29,7 +29,7 @@ const SetProfile = (email) => {
         console.log(User)
         console.log(email.email)
 
-        const response = await fetch('http://localhost:4000/api/users/' + email.email, {
+        const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/' + email.email, {
             method: 'PATCH',
             body: JSON.stringify(User),
             headers: {

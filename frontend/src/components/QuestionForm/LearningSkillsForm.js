@@ -74,7 +74,7 @@ const LearningSkillsForm = ({ email, skillType }) => {
     
             console.log(User)
     
-            const response = await fetch('http://localhost:4000/api/users/add/' + email, {
+            const response = await fetch('https://skillxchange-backend-ih1t.onrender.com/api/users/add/' + email, {
                 method: 'PATCH',
                 body: JSON.stringify(User),
                 headers: {

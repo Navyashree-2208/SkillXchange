@@ -6,7 +6,7 @@ function Profile( userData ) {
     console.log(userData.userData.User.Skills.teaching_skills)
 
     const profilePictureUrl = userData.userData.User.Personal_info.profilePicture   
-        ? `http://localhost:4000${userData.userData.User.Personal_info.profilePicture}` 
+        ? `https://skillxchange-backend-ih1t.onrender.com${userData.userData.User.Personal_info.profilePicture}` 
         : '/images/user.svg'
 
 

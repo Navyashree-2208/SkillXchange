@@ -47,7 +47,7 @@ const Contact = ({ chat, otherUser, displayName, isSelected, onClick, currentUse
 
     useEffect(() => {
         if (otherUser && otherUser.User?.Personal_info?.profilePicture) {
-            setProfilePictureUrl(`http://localhost:4000${otherUser.User.Personal_info.profilePicture}`);
+            setProfilePictureUrl(`https://skillxchange-backend-ih1t.onrender.com${otherUser.User.Personal_info.profilePicture}`);
         } else {
             setProfilePictureUrl('/images/user.svg'); 
         }
