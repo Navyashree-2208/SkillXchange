@@ -8,7 +8,7 @@ import json
 from sklearn.metrics.pairwise import cosine_similarity   #importing modules
 
 app=Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:4000"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 def extract_skill_names(skills):
   if skills is None or isinstance(skills, float):
