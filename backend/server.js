@@ -27,7 +27,7 @@ const checkFirebaseAdmin = (req, res, next) => {
 
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
     methods: ['GET', 'PATCH', 'POST', 'DELETE'],
     credentials: true
 }));
@@ -41,14 +41,16 @@ app.use('/api/users', router);
 app.use('/api/chats', chatRoutes);
 app.use('/api/messages', messageRoutes);
 
-const server = app.listen(4000, () => {
-    console.log('Server is running on port 4000');
+const PORT = process.env.PORT || 4000;
+
+const server = app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
 const io = socketio(server, {
     pingTimeout: 60000,
     cors: {
-        origin: 'http://localhost:3000',
+        origin: process.env.FRONTEND_URL || 'http://localhost:3000',
         methods: ['GET', 'POST']
     }
 });
