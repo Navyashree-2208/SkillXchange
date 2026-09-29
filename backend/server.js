@@ -6,17 +6,21 @@ const chatRoutes = require('./routes/chatRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const cors = require('cors');
 
-//file upload
-const multer = require("multer")
-const path = require("path")
-const fs = require("fs")
-
-
+// file upload
+const multer = require("multer");
+const path = require("path");
+const fs = require("fs");
 
 const admin = require('./config/firebaseAdmin');
 const socketio = require('socket.io');
 
 const app = express();
+
+const allowedOrigins = [
+    'https://skill-xchange-lilac.vercel.app',
+    'https://skill-xchange-rzxbnwf2i-navya-d0af.vercel.app',
+    'http://localhost:3000'
+];
 
 const checkFirebaseAdmin = (req, res, next) => {
     if (!admin.apps.length) {
@@ -26,11 +30,13 @@ const checkFirebaseAdmin = (req, res, next) => {
 };
 
 app.use(express.json());
+
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: allowedOrigins,
     methods: ['GET', 'PATCH', 'POST', 'DELETE'],
     credentials: true
 }));
+
 app.use('/api', checkFirebaseAdmin);
 
 app.get('/', (req, res) => {
@@ -50,8 +56,9 @@ const server = app.listen(PORT, () => {
 const io = socketio(server, {
     pingTimeout: 60000,
     cors: {
-        origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-        methods: ['GET', 'POST']
+        origin: allowedOrigins,
+        methods: ['GET', 'POST'],
+        credentials: true
     }
 });
 
