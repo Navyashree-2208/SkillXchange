@@ -104,7 +104,7 @@ Tired of paying huge amounts of money for private lessons or online courses on t
   - Present to stakeholders.
 <br></details>
 
-## Tech Stack 💻
+## Tech Stack 
 
 - **React**: Building the frontend with a focus on interactivity.
 - **Express.js**: Backend framework for creating RESTful APIs.
