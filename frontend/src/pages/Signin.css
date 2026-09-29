@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #2C31ED;
+  -webkit-box-shadow: 0 0 0px 1000px #DCDFFF inset;
+  font-family: 'Work Sans';
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.welcome {
+  display: flex;
+  height: auto;
+  width: 100%;
+  font-size: 50pt;
+  font-weight: 700;
+  color: #2C31ED;
+  position: relative;
+  text-align: left;
+  animation: slideLeftAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideLeftAnimation {
+  0% {
+    opacity: 0%;
+    translate: -300%;
+  }
+  100% {
+    opacity: 100%;
+    margin-right: 0%;
+  }
+}
+
+.subtitle {
+  display: flex;
+  position: relative;
+  height: auto;
+  width: 100%;
+  font-size: 25pt;
+  font-weight: 500;
+  color: #2C31ED;
+  position: relative;
+  text-align: left;
+  animation: slideLeftAnimation ease 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.verticalcenter {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  min-width: 30%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  left: 10%;
+  text-align: left;
+  user-select: none;
+}
+
+.formcolumn {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 500px;
+  right: 10%;
+  align-items: center;
+}
+
+.background {
+  display: flex;
+  position: absolute;
+  height: 19vw;
+  width: 100vw;
+  bottom: 0px;
+  animation: fadeInAnimation ease 0.5s;
+}
+
+.background-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}

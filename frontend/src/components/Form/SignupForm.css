@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.redirect-b {
+    font-size: 12pt;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    animation: cascadeAnimation ease 0.8s;
+}
+
+.header-b {
+  font-size: 26pt;
+  font-weight: 600;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: fadeWaitAnimation ease 1.2s;
+}
+
+.inputs-b {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.username input {
+    height: 44px;
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    background: transparent;
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    outline: none;
+    color: #000000;
+    font-weight: 600;
+    font-family: "Work Sans";
+    font-size: 12pt;
+    animation: fadeWaitAnimation ease .8s;
+}
+
+.username input:hover {
+    border-color: #2C31ED;
+}
+
+.username input:focus {
+    border-color: #150080;
+}
+
+.username input::placeholder {
+    color: #15008055;
+}
+
+.input-b input {
+    height: 44px;
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    background: transparent;
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    outline: none;
+    color: #000000;
+    font-weight: 600;
+    font-family: "Work Sans";
+    font-size: 12pt;
+    animation: cascadeAnimation ease 0.5s;
+}
+
+.input-b input::placeholder {
+    color: #15008055;
+}
+
+.input-b input:hover {
+    border-color: #2C31ED;
+}
+
+.input-b input:focus {
+    border-color: #150080;
+}
+
+.submit-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 44px;
+    color: #ffffff;
+    background: #2C31ED;
+    border-style: solid;
+    border-color: #2C31ED;
+    border-radius: 8px;
+    border-width: 2px;
+    font-size: 12pt;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    animation: cascadeAnimation ease 0.6s;
+}
+
+.submit-b:hover {
+    background: #150080;
+    border-color: #150080;
+}
+
+.submit-google-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 44px;
+    color: #000000;
+    background: #FFFFFF;
+    border-style: solid;
+    border-color: #E2E2E2;
+    border-radius: 8px;
+    border-width: 1px;
+    font-size: 12pt;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    animation: cascadeAnimation ease 0.7s;
+}
+
+.submit-google-b:hover {
+    background: #DCDFFF;
+    border-color: #DCDFFF;
+    color: #2C31ED;
+}

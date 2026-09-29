@@ -1,0 +1,314 @@
+.body-card {
+    margin: auto;
+    /* padding-top: 2%; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-bottom: 5%;
+    width: 90%;
+    height: fit-content;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 6px #1500804D;
+    animation: fadeInAnimation ease 0.5s;
+}
+
+.edit-background {
+    /* background: #6266FA; */
+    background: #DCDFFF;
+    padding: 100px;
+}
+
+.edit-container {
+    display: flex;
+    flex-wrap: no-wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5%;
+    animation: jumpAnimation ease 0.5s;
+  }
+
+.edit-container-left {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: center;
+    animation: jumpAnimation ease 0.5s;
+}
+
+.edit-container-right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0px;
+    animation: jumpAnimation ease 0.5s;
+}
+
+.edit-label {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.double-input-row {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    column-gap: 20px;
+}
+
+.teaching-header {
+    display: flex;
+    color: #150080;
+    font-size: 30px;
+    font-weight: 650;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    margin-right: 2%;
+}
+
+.learning-header {
+    display: flex;
+    color: #154B51;
+    font-size: 30px;
+    font-weight: 650;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    margin-right: 2%;
+}
+
+.skill-header-icon {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    margin-right: 2%;
+}
+
+.edit-input {
+    margin-bottom: 20px;
+    height: 44px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    background: transparent;
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    outline: none;
+    color: #000000;
+    font-weight: 600;
+    font-family: "Work Sans";
+    font-size: 12pt;
+    transition: all ease 0.15s;
+    animation: fadeWaitAnimation ease 0.3s;
+}
+
+.edit-input:hover {
+    border-color: #2C31ED;
+}
+
+.edit-input:focus {
+    border-color: #150080;
+}
+
+.edit-upload-profile {
+    color: transparent;
+    width: 50%;
+}
+.edit-upload-profile::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.edit-upload-profile::before {
+    content: 'Upload profile';
+    font-family: 'Work Sans';
+    color: #FFFFFF;
+    display: inline-block;
+    background: #2C31ED;
+    border-radius: 8px;
+    border-width: 2px;
+    padding: 12px 20px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 650;
+    font-size: 8pt;
+    transition: all ease 0.15s;
+    margin-bottom: 10px;
+}
+.edit-upload-profile:hover::before {
+    background: #150080;
+    border-color: #150080;
+}
+
+.edit-upload-banner {
+    color: transparent;
+    width: 50%;
+}
+.edit-upload-banner::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.edit-upload-banner::before {
+    content: 'Upload banner';
+    font-family: 'Work Sans';
+    color: #FFFFFF;
+    display: inline-block;
+    background: #2C31ED;
+    border-radius: 8px;
+    border-width: 2px;
+    padding: 12px 18px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 650;
+    font-size: 8pt;
+    transition: all ease 0.15s;
+    margin-bottom: 10px;
+}
+.edit-upload-banner:hover::before {
+    background: #150080;
+    border-color: #150080;
+}
+
+.edit-resize {
+    margin-bottom: 20px;
+    min-height: 44px;
+    max-height: 200px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    background: transparent;
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    outline: none;
+    color: #000000;
+    font-weight: 600;
+    font-family: "Work Sans";
+    font-size: 12pt;
+    resize: vertical;
+    transition: all ease 0.15s;
+}
+
+.edit-resize:hover {
+    border-color: #2C31ED;
+}
+
+.edit-resize:focus {
+    border-color: #150080;
+}
+
+.edit-submit {
+    display: flex;
+    font-family: 'Work Sans';
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    color: #ffffff;
+    background: #2C31ED;
+    border-style: solid;
+    border-color: #2C31ED;
+    border-radius: 8px;
+    border-width: 2px;
+    font-size: 12pt;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    animation: jumpAnimation ease 0.6s;
+}
+
+.edit-submit:hover {
+    background: #150080;
+    border-color: #150080;
+}
+
+.preview-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    min-height: 50px;
+    border-width: 1px;
+    border-bottom-width: 3px;
+    border-color: #E2E2E2;
+    border-style: solid;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.preview-banner {
+
+    margin: auto;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    width: 100%;
+    height: 65px;
+    object-fit: cover; 
+    object-position: 0% 65%;
+    overflow: hidden; 
+    padding: 0;
+}
+
+.preview-profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 3px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.form-submitted {
+    display: flex;
+    font-size: 12pt;
+    font-weight: 600;
+    color: transparent;
+    padding-top: 5px;
+    height: 20px;
+    animation: fadeInOutLeftAnimation ease 1s;
+}
+
+.two-column-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+@keyframes fadeInOutLeftAnimation {
+    0% {
+        /* opacity: 0%; */
+        color: transparent;
+        translate: -20px;
+    }
+    25% {
+        /* opacity: 100%; */
+        color: #000000;
+        translate: 0px;
+    }
+    75% {
+        /* opacity: 100%; */
+        color: #000000;
+        translate: 0px;
+    }
+    100% {
+        /* opacity: 0%; */
+        color: transparent;
+        translate: 20px;
+    }
+}

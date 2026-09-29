@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.chat-header {
+    background-color: #F8F8F8;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #E2E2E2;
+    font-weight: 600;
+    font-size: 16pt;
+}
+
+.message-window {
+    width: 100%;
+    height: calc(100% - 180px);
+    padding-top: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.visible-messages {
+    width: 100%;
+    height: fit-content;
+    display: block;
+}
+
+.message-row {
+    width: 100%;
+    height: fit-content;
+    min-height: 55px;
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.self-message-row {
+    justify-content: flex-end;
+}
+
+.other-message-row {
+    justify-content: flex-start;
+}
+
+.message-box {
+    max-width: 40%;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    font-weight: 550;
+    line-height: 25px;
+}
+
+.self-message-box {
+    background-color: #2C31ED;
+    color: #FFFFFF;
+    border-radius: 15px;
+    align-self: flex-end;
+}
+
+.other-message-box {
+    background-color: #DCDFFF;
+    color: #000000;
+    align-self: flex-start;
+}
+
+.chat-box {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
+    height: 60px;
+    margin-top: 20px;
+    background: #ffffff;
+    border: 1px solid #E2E2E2;
+    border-radius: 15px;
+}
+
+.chat-box input {
+    height: 25px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #000000;
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+    font-size: 12pt;
+}
+
+.icon {
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #DCDFFF;
+    border-radius: 5px;
+}
+
+.other-user-name {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: gray;
+    margin-bottom: 4px;
+    text-align: right;
+}

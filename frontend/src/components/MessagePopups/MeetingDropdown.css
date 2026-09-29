@@ -1,0 +1,115 @@
+.dropdown-container {
+    position: absolute;
+    right: 3%;
+    margin-top: 30%;
+    width: 600px;
+    max-height: 500px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 3px #00000033;
+    border-width: 1px;
+    border-color: #E2E2E2;
+    border-style: solid;
+    border-radius: 8px;
+    z-index: 1;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 1;
+    transform: translateY(0);
+    animation: cascadeAnimation ease 0.2s;
+  }
+
+  
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28pt;
+    font-weight: 700;
+    padding: 3%;
+    border-bottom: 1px #E2E2E2 solid;
+    border-radius: 8px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: 0px 3px 3px #00000011;
+    position: sticky;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+
+.dropdown-scroll-container {
+    max-height: 400px; /* Limit the height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.dropdown-container.hidden {
+    opacity: 0;
+    transform: translateY(-10px); /* Slide up when hiding */
+    pointer-events: none;
+}
+
+.meeting-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.meeting-item {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.meeting-item:last-child {
+    border-bottom: none;
+}
+
+.meeting-title {
+    color: #000000;
+    font-size: 22pt;
+    font-weight: 600;
+}
+
+.meeting-time {
+    color: #150080;
+    font-size: 12pt;
+    font-weight: 550;
+}
+
+.align-right {
+    display: flex;
+    justify-content: right;
+}
+.join-button {
+    display: flex;
+    position: relative;
+    font-family: 'Work Sans';
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #FFFFFF;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: fit-content;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    border-color: #2C31ED;
+    background: #2C31ED;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all .15s ease-in-out;
+}
+
+.join-button:hover {
+    background: #150080;
+    border-color: #150080;
+    cursor: pointer;
+}
+
+.empty-dropdown {
+    padding: 5%;
+    margin: 10px;
+    font-weight: 550;
+}

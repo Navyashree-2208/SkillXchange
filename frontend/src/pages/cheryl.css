@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
+
+/*NAV BAR CSS */
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*.c {
+    font-family: 'Work Sans';
+}
+
+
+
+/* home page css*/
+:root {
+    --light: #DCDFFF;
+    --dark: #291B71;
+    --medium: #6266FA;
+  }
+
+h1.c {
+    font-size: 50px;
+    color: var(--medium2);
+    text-align: center;
+    padding-top: 75px;
+    line-height: 1.25;
+}
+
+.h2c {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    margin:0;
+}
+
+h3.c {
+    text-align: center;
+  }
+
+h4.c {
+    font-size: 30px;
+    text-align: center;
+    margin:0;
+    padding-bottom: 80px;
+}
+
+
+.mediumBackground.c {
+    background-color: var(--medium);
+    padding-bottom: 300px;
+}
+
+.darkBackground.c {
+    background-color: var(--dark);
+}
+
+
+.white.c {
+    color: #FFFFFF;
+}
+
+.loading.c {
+    font-size: 50px;
+    color: var(--medium);
+    text-align: center;
+    padding-top: 75px;
+    line-height: 1.25;
+    stroke-width: 4px;
+    font-weight: bolder;
+}
+
+.white.a {
+    color: #FFFFFF;
+    font-weight: 550;
+}
+
+
+
+/* PROFILE PAGE CSS
+banner, profile info, about me styling */
+.border.c {
+    
+    border-style:solid;
+    border-color:  #E2E2E2;
+    border-width: 1px;
+    border-radius: 15px;
+    margin-left:8%;
+    margin-right: 8%;
+    margin-top: 40px;
+    
+}
+
+.top.c {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    height:auto;
+    width:100%
+}
+
+.topleft.c {
+    display: flex;
+}
+
+.topright.c {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.bottom.c {
+    display: flex;
+    height: 100%;
+}
+
+.bottomleft.c {
+    display: flex;
+}
+
+.bottomright.c {
+    align-items: flex-end;
+}
+
+.edit.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #2C31ED;
+    font-family: 'Work Sans';
+    font-weight: 600;
+    font-size: 12pt;
+    color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 64px;
+    text-decoration: none;
+    transition: all ease 0.15s;
+}
+
+.edit.c:hover {
+    background-color: #291B71;
+}
+
+.aboutMe.c {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.profileText.c {
+    line-height: 1.75;
+    padding-left: 20px;
+}
+
+.bannerPicture.c {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; 
+    object-position: 0% 65%;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    overflow: hidden; 
+    padding: 0;
+}
+
+.topText.c {
+    vertical-align: top;
+}
+
+.profileTextHeader.c {
+    font-size: 15pt;
+    margin:0;
+    padding: 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+.profileSkillHeader.c {
+    font-size: 20pt;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.pc {
+    font-family: 'NATS', sans-serif;
+    font-size: 18px;
+    padding:0;
+    margin:0;
+    line-height: 1.5;
+}
+
+.pfp.c {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/*header styling*/
+.title.c {
+    margin-left: 5%;
+    margin-top: 30px;
+}
+
+/* teaching card styling */
+.teachingCard.c {
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    width: 100%;
+    max-width: 300px; 
+    margin: 11px; 
+    background-color: #fff; 
+    border-radius: 10px; 
+}
+
+
+.descriptionText.c {
+    margin:0;
+    padding: 20px;
+    padding-top: 0px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+h6.c {
+    margin: 0;
+    vertical-align: baseline;
+}
+
+
+.teachingCardText.c {
+    line-height: 0;
+}
+
+
+.center.c {
+    text-align: center;
+}
+
+.loading.a {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    font-size: 32pt;
+    font-weight: 600;
+    padding-top: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+/* form css */
+label.c {
+    font-size: 15px;
+    display:block;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+input.c {
+    display: block;
+    width:100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+textarea.c {
+    display: block;
+    width:100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+.submitButton.c {
+    padding: 6px 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    border:none;
+    background-color: #2C31ED;
+    color: white;
+    cursor: pointer;
+    width: 20%;
+    height: auto;
+    font-size: 15px;
+}
+
+
+.form.c {
+    width:80%;
+}
+
+.margin0px.c{
+    margin-bottom:0px;
+
+}
+
+.alignLeft.c {
+    text-align: left;
+}
+
+.marginLeft15.c {
+    margin-left: 15%;
+    padding-left: 15px;
+}
+
+.form-submitted.c {
+    padding-top: 10px;
+}
+
+/*CARD STYLING */
+
+:root {
+    --light: #DCDFFF;
+    --dark: #291B71;
+    --medium2: #2C31ED
+  }
+
+
+  .cards.c {
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1120px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  .cards__items.c {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .card__item.c {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 15px;
+    padding-bottom: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  .cards__item__info.c{
+    padding: 15px;
+  }
+
+  .cards__item__text.c {
+    color: #252e48;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+
+.noMargin.c{
+    margin:0;
+    padding: 0;
+  }
+
+.topBackground.c {
+    display: flex;
+    background-image: url('/public/images/background.svg');
+    background-attachment: scroll; 
+    background-size:cover;
+    background-position: center;
+    /* padding-top: 190px; */
+}
+.bottomBackground.c {
+  width:100%;
+  height: auto;
+  margin:0;
+  padding:0;
+}
+
+*.c {
+  box-sizing: border-box; 
+}
+
+.container.c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.box.c {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; 
+  width: 100%;
+  max-width: 200px; 
+  margin: 20px; 
+  background-color: #fff; 
+  border-radius: 10px; 
+  padding: 30px;
+}
+
+.box__img.c {
+  width: 100%; 
+  height: auto; 
+}
+
+.box__text.c {
+  margin-top: 20px;
+  text-align: center; 
+  
+  
+}
+
+.blackBackground.c {
+    background-color: black;
+}
+
+.textCenter.c {
+    text-align: center;
+}
+
+.topBottomPadding.c {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.topPadding.c {
+    padding-top: 20px;
+}
+
+.padding10.c {
+    padding: 10px 10px 10px 10px;
+}
+
+.bottomPadding20.c {
+    padding-bottom: 40px;
+}
+
+.top.c {
+    display: flex;
+    justify-content: space-between; /* Pushes elements to opposite sides */
+    align-items: center;
+}
+
+.topleft.c {
+    flex-grow: 1; /* Title will expand as much as possible */
+}
+
+.topright.c {
+    text-align: right;
+}
+
+
+
+.bottom.c {
+    display: flex;
+    justify-content: space-between; /* Aligns Hours Taught and Delete icon to the left and right */
+    align-items: center;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.bottomright.c {
+    cursor: pointer;
+    color: red; /* Style for delete icon */
+    align-self: flex-end;
+    padding: 10px;
+}
+
+.bottomleft.c {
+    padding-left: 20px;
+}
+
+.hoverEnlarge {
+    animation-duration: 2s;
+    transition: transform .3s ease-in-out;
+}
+
+.hoverEnlarge:hover {
+    
+    transform: scale(1.05);
+    
+}
+
+.hoverEnlarge2 {
+    animation-duration: 1s;
+    transition: transform .3s ease-in-out;
+}
+
+.hoverEnlarge2:hover {
+    
+    transform: scale(1.1);
+    
+}
+
+.fade.c {
+    animation-duration: 0.45s;
+}
+
+/* questionaire page*/
+.qbody.c {
+    background: #6266FA;
+    min-height:100vh
+}
+
+
+
+.QuestionHeader.c {
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding-top: 18%;
+}
+
+.QuestionSubheader.c {
+    font-size: 2vw;
+    text-align: center;
+    color: white;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 12px;
+}
+
+.questionButton.c {
+    height: 35px;
+    color: #2C31ED;
+    background: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 12pt;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    animation: jumpAnimation ease 0.6s;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.questionContainer.c {
+    margin-top: 30px;
+}
+
+.nextQuestionHeader.c {
+    padding-top: 80px;
+    font-size: 3.5vw;
+}
+
+.questionaireCard.c {
+    width: 420px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-width: 1px;
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+    border-color: #E2E2E2;
+    transition: height 0.65s ease, width 0.3s ease; 
+}
+
+.tabs.c {
+    display: flex;            
+    justify-content: center;    
+    align-items: center;   
+    border-color: #252e48;
+}
+
+.tab.c {
+    height:100%;
+    flex: 1;
+    background-color: #DCDFFF;
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    padding-bottom: 20px;
+}
+.tab.c.right {
+    border-top-right-radius: 9px;  
+}
+.tab.c.left {
+    border-top-left-radius: 8px;  
+}
+.tab.c.active {
+    background-color: #ffffff;
+    
+}
+
+.tabs.c button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    height: 100%;
+    background-color: transparent;
+}
+
+.tabContent.c {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdownTitle.c {
+    font-family: 'Work Sans';
+    font-weight: 600;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.dropdown.c {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-family: 'Work Sans';
+    font-weight: 550;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-color: #DCDFFF;
+    border-width: 2px;
+    border-radius: 8px;
+    border-style: solid;
+    padding: 10px;
+    align-self: center;
+    margin-top: 5px;
+    
+}
+
+.dropdownText.c {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color:#291B71
+}
+
+
+.tabTitle.c {
+    font-family: 'Work Sans';
+    font-weight: 600;
+    font-size: 18px;
+    color:#291B71;
+    text-align: center;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+.addSkillButton.c {
+    height: 35px;
+    color: white;
+    background: #6266FA;
+    border-radius: 8px;
+    border: none;
+    font-size: 12pt;
+    font-weight: 500;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.profileContainer.c {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-width: 1px;
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+    border-color: #E2E2E2;
+    transition: height 0.65s ease, width 0.3s ease; 
+    width: 450px;
+}
+
+:root {
+    --animate-delay: 0.12s;
+  }
+
+.submittedForm.c {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0;
+}
+
+.noPaddingBottom.c {
+    padding-bottom: 0px;
+}
+
+.dropdown.c option {
+    padding: 8px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.dropdown.c option:hover{
+    background-color: #f0f0f0;
+}
+
+
+.setProfileTitle.c{
+    font-family: 'Work Sans';
+    font-weight: 600;
+    font-size: 15px;
+    color:#291B71;
+    background-color: transparent;
+}
+
+.setProfileInput.c {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-family: 'Work Sans';
+    font-weight: 550;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-color: #DCDFFF;
+    border-width: 2px;
+    border-radius: 8px;
+    border-style: solid;
+    padding: 10px;
+    align-self: center;
+    margin-top: 5px;
+}
+
+.setProfileResize.c {
+    min-height: 44px;
+    max-height: 200px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: #DCDFFF;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    outline: none;
+    color: #000000;
+    font-family: 'Work Sans';
+    font-weight: 550;
+    color: #000000;
+    resize: vertical;
+    transition: all ease 0.05s;
+}
+
+.edit-resize:hover {
+    border-color: #2C31ED;
+}
+
+.edit-resize:focus {
+    border-color: #150080;
+}
+
+@media only screen and (min-width: 600px) {
+  .box.c {
+      width: calc(33.33% - 20px); 
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .box.c {
+      width: calc(20% - 20px); 
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cards__items.c {
+      display: flex;
+  }
+}
+  
+@media only screen and (max-width: 1024px) {
+  .cards__items.c {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+    width: 70%;
+  }
+
+  }
