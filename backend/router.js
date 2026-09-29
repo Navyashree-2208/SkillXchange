@@ -102,7 +102,7 @@ router.post('/recommendations', async (req,res)=>{
     const allusers= await UserProfile.find({}).lean()
     console.log({username:username, usersdata:allusers})
 
-    const flaskResponse= await axios.post('http://localhost:8000/api/getrecommendations', {
+    const flaskResponse= await axios.post('https://skillxchange-dvdu.onrender.com/api/getrecommendations', {
       username:username,
       usersdata: allusers
     },{
