@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { firebaseConfig } from './firebaseauth';
-import { initializeApp } from 'firebase/app';
+import { auth } from './firebaseauth';
 import './SignupForm.css';
-import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import {
+    createUserWithEmailAndPassword,
+    signInWithPopup,
+    GoogleAuthProvider
+} from 'firebase/auth';
 
 function SignupForm() {
     const navigate = useNavigate();
@@ -25,14 +28,11 @@ function SignupForm() {
     };
 
     const handlebuttonclick = () => {
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth();
 
         createUserWithEmailAndPassword(auth, emailinput, passwordinput)
             .then((userCredential) => {
                 const user = userCredential.user;
 
-                 // after auth, post req to create user (empty arrays for skills)
                 const userData = {
                     User: {
                         Personal_info: {
@@ -54,75 +54,154 @@ function SignupForm() {
                     },
                     body: JSON.stringify(userData),
                 })
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error('Failed to create user in MongoDB');
-                    }
-                    return response.json();
-                })
-                .then((data) => {
-                    console.log("User created successfully in MongoDB:", data);
-                    navigate('/questionaire');
-                })
-                .catch((error) => {
-                    console.error("Error during user creation in MongoDB:", error.message);
-                });
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error('Failed to create user in MongoDB');
+                        }
+                        return response.json();
+                    })
+                    .then((data) => {
+                        console.log(
+                            "User created successfully in MongoDB:",
+                            data
+                        );
+
+                        localStorage.setItem(
+                            'loggedInUserId',
+                            user.uid
+                        );
+
+                        navigate('/questionaire');
+                    })
+                    .catch((error) => {
+                        console.error(
+                            "Error during user creation in MongoDB:",
+                            error.message
+                        );
+                    });
             })
             .catch((error) => {
-                const errorCode = error.code;
-                if (errorCode === 'auth/email-already-in-use') {
+                console.error(
+                    "Firebase signup error:",
+                    error.code,
+                    error.message
+                );
+
+                if (error.code === 'auth/email-already-in-use') {
                     console.log("Email already exists bruh");
+                } else if (error.code === 'auth/weak-password') {
+                    console.log("Password must be at least 6 characters");
+                } else if (error.code === 'auth/invalid-email') {
+                    console.log("Invalid email address");
                 }
             });
     };
 
     const handleGoogleSignIn = () => {
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth();
         const provider = new GoogleAuthProvider();
 
         signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user;
+
                 console.log("Google Sign-In successful:", user);
-                localStorage.setItem('loggedInUserId', user.uid);
+
+                localStorage.setItem(
+                    'loggedInUserId',
+                    user.uid
+                );
+
                 navigate('/');
             })
             .catch((error) => {
-                console.error("Error with Google Sign-In:", error.message);
+                console.error(
+                    "Error with Google Sign-In:",
+                    error.code,
+                    error.message
+                );
             });
     };
 
     return (
-        
         <div className='container a'>
+
             <div className="header-b">
                 Sign up for SkillXchange
             </div>
+
             <div className="inputs">
+
                 <div className="username">
-                    <input type="text" id="username" value={username} onChange={handleusername} placeholder="Username"/>
+                    <input
+                        type="text"
+                        id="username"
+                        value={username}
+                        onChange={handleusername}
+                        placeholder="Username"
+                    />
                 </div>
+
                 <div className="input-b">
-                    <input type="email" id="email" value={emailinput} onChange={handleemail} placeholder="Email" />
+                    <input
+                        type="email"
+                        id="email"
+                        value={emailinput}
+                        onChange={handleemail}
+                        placeholder="Email"
+                    />
                 </div>
+
                 <div className="input-b">
-                    <input type="password" id="password" value={passwordinput} onChange={handlepassword} placeholder="Password" />
+                    <input
+                        type="password"
+                        id="password"
+                        value={passwordinput}
+                        onChange={handlepassword}
+                        placeholder="Password"
+                    />
+                </div>
+
+            </div>
+
+            <div className="submit-container">
+                <div
+                    className="submit-b"
+                    onClick={handlebuttonclick}
+                >
+                    Sign up
                 </div>
             </div>
+
             <div className="submit-container">
-                <div className="submit-b" onClick={handlebuttonclick}>Sign up</div>
-            </div>
-            <div className="submit-container">
-                <div className="submit-google-b" onClick={handleGoogleSignIn}>
-                    <img src={"/images/google.svg"} alt="google" className="google-icon" draggable="false" />Sign up with Google
+                <div
+                    className="submit-google-b"
+                    onClick={handleGoogleSignIn}
+                >
+                    <img
+                        src={"/images/google.svg"}
+                        alt="google"
+                        className="google-icon"
+                        draggable="false"
+                    />
+                    Sign up with Google
                 </div>
             </div>
+
             <div className="text">
                 <div className="redirect-b">
-                    <span>Already have an account? <Link to='/signin' state={{ isSigningIn: true }} className="link">Sign in</Link></span>
+                    <span>
+                        Already have an account?{' '}
+                        <Link
+                            to='/signin'
+                            state={{ isSigningIn: true }}
+                            className="link"
+                        >
+                            Sign in
+                        </Link>
+                    </span>
                 </div>
             </div>
+
         </div>
     );
 }
